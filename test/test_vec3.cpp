@@ -1,4 +1,15 @@
-#include "vec3.h"
+//------------------------------------------------------------------------------
+// This file is part of the PTrace Engine.
+// File: test_ray.cpp
+//
+// Created by pyoneerC on 6/27/2024
+// Copyright (c) 2024 pyoneerC. All rights reserved.
+//
+// Description:
+// [Brief description of the file's contents and purpose]
+//------------------------------------------------------------------------------
+
+#include "../vec3.h"
 #include "gtest/gtest.h"
 #include <cmath>
 
@@ -255,6 +266,20 @@ TEST(Vec3Test, TestVec3DivisionByScalar) {
   EXPECT_FLOAT_EQ(v2.x(), 1.0f);
   EXPECT_FLOAT_EQ(v2.y(), 2.0f);
   EXPECT_FLOAT_EQ(v2.z(), 3.0f);
+
+  vec3 v3(1.0f, 2.0f, 3.0f);
+  vec3 v4 = v3 / 3.0f;
+
+  EXPECT_FLOAT_EQ(v4.x(), 1.0f / 3.0f);
+  EXPECT_FLOAT_EQ(v4.y(), 2.0f / 3.0f);
+  EXPECT_FLOAT_EQ(v4.z(), 3.0f / 3.0f);
+
+  vec3 v5(1.0f, 2.0f, 3.0f);
+  vec3 v6 = v5 / 1.0f;
+
+  EXPECT_FLOAT_EQ(v6.x(), 1.0f);
+  EXPECT_FLOAT_EQ(v6.y(), 2.0f);
+  EXPECT_FLOAT_EQ(v6.z(), 3.0f);
 }
 
 TEST(Vec3Test, TestVec3DotProduct) {
@@ -262,6 +287,16 @@ TEST(Vec3Test, TestVec3DotProduct) {
   vec3 v2(4.0f, 5.0f, 6.0f);
 
   EXPECT_FLOAT_EQ(dot(v1, v2), 32.0f);
+
+  vec3 v3(1.0f, 0.0f, 0.0f);
+  vec3 v4(0.0f, 1.0f, 0.0f);
+
+  EXPECT_FLOAT_EQ(dot(v3, v4), 0.0f);
+
+  vec3 v5(1.0f, 2.0f, 3.0f);
+  vec3 v6(9.0f, 8.0f, 7.0f);
+
+  EXPECT_FLOAT_EQ(dot(v5, v6), 46.0f);
 }
 
 TEST(Vec3Test, TestVec3RGBAccessors) {
@@ -284,6 +319,17 @@ TEST(Vec3Test, TestVec3CrossProduct) {
   // Check orthogonality
   EXPECT_FLOAT_EQ(dot(v1, v3), 0.0f);
   EXPECT_FLOAT_EQ(dot(v2, v3), 0.0f);
+
+  vec3 v4(1.0f, 2.0f, 3.0f);
+  vec3 v5(4.0f, 5.0f, 6.0f);
+  vec3 v6 = cross(v4, v5);
+
+  EXPECT_FLOAT_EQ(v6.x(), -3.0f);
+  EXPECT_FLOAT_EQ(v6.y(), 6.0f);
+  EXPECT_FLOAT_EQ(v6.z(), -3.0f);
+
+  EXPECT_FLOAT_EQ(dot(v4, v6), 0.0f);
+  EXPECT_FLOAT_EQ(dot(v5, v6), 0.0f);
 }
 
 TEST(Vec3Test, TestVec3Normalization) {

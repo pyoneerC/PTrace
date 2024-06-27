@@ -1,6 +1,3 @@
-
-#pragma once
-
 //------------------------------------------------------------------------------
 // This file is part of the PTrace Engine.
 // File: vec3.cpp
@@ -14,9 +11,6 @@
 
 #include "vec3.h"
 #include <cmath>
-#include <iostream>
-
-
 
 vec3& vec3::operator-(const vec3& v) {
   e[0] -= v.e[0];

@@ -1,6 +1,6 @@
 
 #pragma once
-#include <ostream>
+
 
 //------------------------------------------------------------------------------
 // This file is part of the PTrace Engine.
