@@ -24,7 +24,6 @@ public:
   [[nodiscard]] float g() const { return e[1]; }
   [[nodiscard]] float b() const { return e[2]; }
 
-  vec3& operator+() const;
   vec3 operator-() const;
 
   vec3& operator+(const vec3& v);
@@ -41,6 +40,8 @@ public:
 
   vec3& operator*=(float t);
   vec3& operator/=(float t);
+
+  vec3 operator*(float t) const;
 
   float lenght() const;
 

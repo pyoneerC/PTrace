@@ -11,8 +11,6 @@ int main() {
   vec3 a(1, 2, 3);
   vec3 b(4, 5, 6);
   vec3 c = a + b;
-  ray r(a, b);
-  std::cout << r.origin().x() << " " << r.origin().y() << " " << r.origin().z() << std::endl;
   std::cout << c.x() << " " << c.y() << " " << c.z() << std::endl;
   return 0;
 
