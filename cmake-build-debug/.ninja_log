@@ -1,3 +1,9 @@
 # ninja log v6
 11	313	7412193475794324	CMakeFiles/raytracing.dir/main.cpp.obj	732a424432d4f73
 313	379	7412193478816153	raytracing.exe	19f30edc0957123e
+115	605	7412208248642994	CMakeFiles/raytracing.dir/vec3.cpp.obj	6277b8ad9650eba8
+19	206	7412209008909601	CMakeFiles/raytracing.dir/vec3.cpp.obj	6277b8ad9650eba8
+16	363	7412209008880109	CMakeFiles/raytracing.dir/main.cpp.obj	732a424432d4f73
+363	550	7412209012351758	raytracing.exe	3730b921ae41eb37
+16	194	7412209601983728	CMakeFiles/raytracing.dir/vec3.cpp.obj	6277b8ad9650eba8
+195	260	7412209603774796	raytracing.exe	3730b921ae41eb37

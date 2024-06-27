@@ -13,7 +13,7 @@
 //------------------------------------------------------------------------------
 
 class vec3 {
-
+public:
   vec3() = default;
   vec3(const float e0, const float e1, const float e2) : e{e0, e1, e2} {}
 
@@ -25,6 +25,8 @@ class vec3 {
   [[nodiscard]] float b() const { return e[2]; }
 
   const vec3& operator+() const;
+  vec3& operator+(const vec3& v);
+  vec3& operator-(const vec3& v);
   vec3 operator-() const;
   float operator[](const int i) const;
 
