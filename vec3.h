@@ -1,5 +1,6 @@
 
 #pragma once
+#include <ostream>
 
 //------------------------------------------------------------------------------
 // This file is part of the PTrace Engine.
@@ -38,13 +39,19 @@ public:
   vec3& operator*=(const vec3& v);
   vec3& operator/=(const vec3& v);
 
-  vec3& operator*=(float t);
-  vec3& operator/=(float t);
+  bool operator==(const vec3& v) const;
+  bool operator!=(const vec3& v) const;
+  bool operator<(const vec3& v) const;
+  bool operator>(const vec3& v) const;
+  bool operator<=(const vec3& v) const;
+  bool operator>=(const vec3& v) const;
+
+  vec3& operator!();
 
   vec3 operator*(float t) const;
   vec3 operator/(float t) const;
 
-  float lenght() const;
+  float length() const;
 
   float squared_length() const;
 
