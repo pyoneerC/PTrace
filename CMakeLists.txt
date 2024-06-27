@@ -10,4 +10,5 @@ add_executable(raytracing main.cpp
 )
 
 find_package(fmt)
+
 target_link_libraries(raytracing fmt::fmt)
