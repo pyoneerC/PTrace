@@ -257,6 +257,12 @@ CONAN_HOST_PROFILE:STRING=default;auto-cmake
 //Command line arguments for conan install
 CONAN_INSTALL_ARGS:STRING=--build=missing
 
+//The directory containing a CMake configuration file for Catch2.
+Catch2_DIR:PATH=D:/OneDrive/Escritorio/desktop/sources/raytracing/cmake-build-debug/conan/build/Debug/generators
+
+//The directory containing a CMake configuration file for GTest.
+GTest_DIR:PATH=D:/OneDrive/Escritorio/desktop/sources/raytracing/cmake-build-debug/conan/build/Debug/generators
+
 //Path to a program.
 _cmake_program:FILEPATH=D:/bin/cmake.exe
 

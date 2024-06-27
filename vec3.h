@@ -42,6 +42,7 @@ public:
   vec3& operator/=(float t);
 
   vec3 operator*(float t) const;
+  vec3 operator/(float t) const;
 
   float lenght() const;
 
