@@ -1,4 +1,182 @@
-C:\Users\Usuario\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/Usuario/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S D:\OneDrive\Escritorio\desktop\sources\raytracing -B D:\OneDrive\Escritorio\desktop\sources\raytracing\cmake-build-debug
--- Configuring done (0.2s)
+C:\Users\Usuario\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/Usuario/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=conan_provider.cmake -G Ninja -S D:\OneDrive\Escritorio\desktop\sources\raytracing -B D:\OneDrive\Escritorio\desktop\sources\raytracing\cmake-build-debug
+-- CMake-Conan: first find_package() found. Installing dependencies with Conan
+-- CMake-Conan: Checking if a default profile exists
+C:\Users\Usuario\.conan2\profiles\default
+-- CMake-Conan: cmake_system_name=Windows
+-- CMake-Conan: cmake_system_processor=x86_64
+-- CMake-Conan: CMake compiler=GNU
+-- CMake-Conan: CMake compiler version=13.1.0
+-- CMake-Conan: [settings] compiler=gcc
+-- CMake-Conan: [settings] compiler.version=13
+-- CMake-Conan: Creating profile D:/OneDrive/Escritorio/desktop/sources/raytracing/cmake-build-debug/conan_host_profile
+-- CMake-Conan: Profile: 
+[settings]
+arch=x86_64
+os=Windows
+compiler=gcc
+compiler.version=13
+compiler.cppstd=20
+compiler.libcxx=libstdc++11
+build_type=Debug
+[conf]
+tools.cmake.cmaketoolchain:generator=Ninja
+tools.build:compiler_executables={"c":"C:/Users/Usuario/AppData/Local/Programs/CLion/bin/mingw/bin/gcc.exe","cpp":"C:/Users/Usuario/AppData/Local/Programs/CLion/bin/mingw/bin/g++.exe"}
+
+-- CMake-Conan: Installing single configuration Debug
+-- CMake-Conan: conan install D:/OneDrive/Escritorio/desktop/sources/raytracing -of=D:/OneDrive/Escritorio/desktop/sources/raytracing/cmake-build-debug/conan --profile:host=default;--profile:host=D:/OneDrive/Escritorio/desktop/sources/raytracing/cmake-build-debug/conan_host_profile;--profile:build=default;--build=missing
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=x86_64
+build_type=Debug
+compiler=gcc
+compiler.cppstd=20
+compiler.libcxx=libstdc++11
+compiler.version=13
+os=Windows
+[conf]
+tools.build:compiler_executables={'c': 'C:/Users/Usuario/AppData/Local/Programs/CLion/bin/mingw/bin/gcc.exe', 'cpp': 'C:/Users/Usuario/AppData/Local/Programs/CLion/bin/mingw/bin/g++.exe'}
+tools.cmake.cmaketoolchain:generator=Ninja
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=msvc
+compiler.cppstd=14
+compiler.runtime=dynamic
+compiler.runtime_type=Release
+compiler.version=193
+os=Windows
+
+
+======== Computing dependency graph ========
+fmt/10.2.1: Not found in local cache, looking in remotes...
+fmt/10.2.1: Checking remote: conancenter
+fmt/10.2.1: Downloaded recipe revision 9199a7a0611866dea5c8849a77467b25
+Graph root
+    conanfile.py: D:/OneDrive/Escritorio/desktop/sources/raytracing\conanfile.py
+Requirements
+    fmt/10.2.1#9199a7a0611866dea5c8849a77467b25 - Downloaded (conancenter)
+
+======== Computing necessary packages ========
+fmt/10.2.1: Compatible package ID 1473d8dfa604ad4e9d03de8dfa936edd3903f36f equal to the default package ID: Skipping it.
+fmt/10.2.1: Checking 9 compatible configurations
+fmt/10.2.1: Compatible configurations not found in cache, checking servers
+fmt/10.2.1: '02c73a353ae2af7e91bce97a08b6aafaab6c107d': compiler.cppstd=11
+fmt/10.2.1: 'f46672d5c7de06957a2e9b201317aa203b835a25': compiler.cppstd=gnu11
+fmt/10.2.1: 'be64c7998ac7c6518742040eb7507f5a203d9e40': compiler.cppstd=14
+fmt/10.2.1: '101e3438cd9c20abda51d0e7122b8e0db5ff7829': compiler.cppstd=gnu14
+fmt/10.2.1: '12d13b87c8711fdb71230438431817c6a7fc457b': compiler.cppstd=17
+fmt/10.2.1: 'ba8c684db7d443df95952d77780e9081fb31bbbb': compiler.cppstd=gnu17
+fmt/10.2.1: '9f6eaa1ca13177314212906dd83da219397ccac9': compiler.cppstd=gnu20
+fmt/10.2.1: 'ed67f9deab4ca42d30f65278b2a55fe02df49554': compiler.cppstd=23
+fmt/10.2.1: '9bb6052bd8fc6612624d7fffc31406ac046d45bb': compiler.cppstd=gnu23
+Requirements
+    fmt/10.2.1#9199a7a0611866dea5c8849a77467b25:1473d8dfa604ad4e9d03de8dfa936edd3903f36f - Build
+
+======== Installing packages ========
+fmt/10.2.1: Sources downloaded from 'conancenter'
+fmt/10.2.1: Calling source() in C:\Users\Usuario\.conan2\p\fmt05805469774f3\s\src
+fmt/10.2.1: Unzipping 4.6MB, this can take a while
+
+
+-------- Installing package fmt/10.2.1 (1 of 1) --------
+fmt/10.2.1: Building from source
+fmt/10.2.1: Package fmt/10.2.1:1473d8dfa604ad4e9d03de8dfa936edd3903f36f
+fmt/10.2.1: Copying sources to build folder
+fmt/10.2.1: Building your package in C:\Users\Usuario\.conan2\p\b\fmtbd40bce86df3d\b
+fmt/10.2.1: Calling generate()
+fmt/10.2.1: Generators folder: C:\Users\Usuario\.conan2\p\b\fmtbd40bce86df3d\b\build\Debug\generators
+fmt/10.2.1: CMakeToolchain generated: conan_toolchain.cmake
+fmt/10.2.1: CMakeToolchain generated: C:\Users\Usuario\.conan2\p\b\fmtbd40bce86df3d\b\build\Debug\generators\CMakePresets.json
+fmt/10.2.1: CMakeToolchain generated: C:\Users\Usuario\.conan2\p\b\fmtbd40bce86df3d\b\src\CMakeUserPresets.json
+fmt/10.2.1: Generating aggregated env files
+fmt/10.2.1: Generated aggregated env files: ['conanbuild.bat', 'conanrun.bat']
+fmt/10.2.1: Calling build()
+fmt/10.2.1: apply_conandata_patches(): No patches defined in conandata
+fmt/10.2.1: Running CMake.configure()
+fmt/10.2.1: RUN: cmake -G "Ninja" -DCMAKE_TOOLCHAIN_FILE="generators/conan_toolchain.cmake" -DCMAKE_INSTALL_PREFIX="C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p" -DFMT_DOC="OFF" -DFMT_TEST="OFF" -DFMT_INSTALL="ON" -DFMT_LIB_DIR="lib" -DFMT_OS="ON" -DCMAKE_POLICY_DEFAULT_CMP0091="NEW" -DCMAKE_BUILD_TYPE="Debug" "C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/b/src"
+-- CMake version: 3.29.0-rc3
+-- Using Conan toolchain: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/b/build/Debug/generators/conan_toolchain.cmake
+-- Conan toolchain: C++ Standard 20 with extensions OFF
+-- Conan toolchain: Setting BUILD_SHARED_LIBS = OFF
+-- The CXX compiler identification is GNU 13.1.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Users/Usuario/AppData/Local/Programs/CLion/bin/mingw/bin/g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Version: 10.2.1
+-- Build type: Debug
+-- Configuring done (4.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/b/build/Debug
+
+fmt/10.2.1: Running CMake.build()
+fmt/10.2.1: RUN: cmake --build "C:\Users\Usuario\.conan2\p\b\fmtbd40bce86df3d\b\build\Debug" -- -j12
+[1/3] Building CXX object CMakeFiles/fmt.dir/src/os.cc.obj
+[2/3] Building CXX object CMakeFiles/fmt.dir/src/format.cc.obj
+[3/3] Linking CXX static library libfmtd.a
+
+fmt/10.2.1: Package '1473d8dfa604ad4e9d03de8dfa936edd3903f36f' built
+fmt/10.2.1: Build folder C:\Users\Usuario\.conan2\p\b\fmtbd40bce86df3d\b\build\Debug
+fmt/10.2.1: Generating the package
+fmt/10.2.1: Packaging in folder C:\Users\Usuario\.conan2\p\b\fmtbd40bce86df3d\p
+fmt/10.2.1: Calling package()
+fmt/10.2.1: Running CMake.install()
+fmt/10.2.1: RUN: cmake --install "C:\Users\Usuario\.conan2\p\b\fmtbd40bce86df3d\b\build\Debug" --prefix "C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p"
+-- Install configuration: "Debug"
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/lib/libfmtd.a
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include/fmt/args.h
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include/fmt/chrono.h
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include/fmt/color.h
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include/fmt/compile.h
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include/fmt/core.h
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include/fmt/format.h
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include/fmt/format-inl.h
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include/fmt/os.h
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include/fmt/ostream.h
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include/fmt/printf.h
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include/fmt/ranges.h
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include/fmt/std.h
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include/fmt/xchar.h
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/lib/cmake/fmt/fmt-config.cmake
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/lib/cmake/fmt/fmt-config-version.cmake
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/lib/cmake/fmt/fmt-targets.cmake
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/lib/cmake/fmt/fmt-targets-debug.cmake
+-- Installing: C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/lib/pkgconfig/fmt.pc
+
+fmt/10.2.1: package(): Packaged 13 '.h' files
+fmt/10.2.1: package(): Packaged 1 '.a' file: libfmtd.a
+fmt/10.2.1: package(): Packaged 1 file: LICENSE
+fmt/10.2.1: Created package revision 93d3418e91a7298bf54c2d0b8d629044
+fmt/10.2.1: Package '1473d8dfa604ad4e9d03de8dfa936edd3903f36f' created
+fmt/10.2.1: Full package reference: fmt/10.2.1#9199a7a0611866dea5c8849a77467b25:1473d8dfa604ad4e9d03de8dfa936edd3903f36f#93d3418e91a7298bf54c2d0b8d629044
+fmt/10.2.1: Package folder C:\Users\Usuario\.conan2\p\b\fmtbd40bce86df3d\p
+WARN: deprecated: Usage of deprecated Conan 1.X features that will be removed in Conan 2.X:
+WARN: deprecated:     'cpp_info.names' used in: fmt/10.2.1
+
+======== Finalizing install (deploy, generators) ========
+conanfile.py: Writing generators to D:\OneDrive\Escritorio\desktop\sources\raytracing\cmake-build-debug\conan\build\Debug\generators
+conanfile.py: Generator 'CMakeDeps' calling 'generate()'
+conanfile.py: CMakeDeps necessary find_package() and targets for your CMakeLists.txt
+    find_package(fmt)
+    target_link_libraries(... fmt::fmt)
+conanfile.py: Calling generate()
+conanfile.py: Generators folder: D:\OneDrive\Escritorio\desktop\sources\raytracing\cmake-build-debug\conan\build\Debug\generators
+conanfile.py: CMakeToolchain generated: conan_toolchain.cmake
+conanfile.py: CMakeToolchain: Preset 'conan-debug' added to CMakePresets.json.
+    (cmake>=3.23) cmake --preset conan-debug
+    (cmake<3.23) cmake <path> -G Ninja -DCMAKE_TOOLCHAIN_FILE=generators\conan_toolchain.cmake  -DCMAKE_POLICY_DEFAULT_CMP0091=NEW -DCMAKE_BUILD_TYPE=Debug
+conanfile.py: CMakeToolchain generated: D:\OneDrive\Escritorio\desktop\sources\raytracing\cmake-build-debug\conan\build\Debug\generators\CMakePresets.json
+conanfile.py: Generating aggregated env files
+conanfile.py: Generated aggregated env files: ['conanbuild.bat', 'conanrun.bat']
+Install finished successfully
+-- CMake-Conan: CONAN_GENERATORS_FOLDER=D:/OneDrive/Escritorio/desktop/sources/raytracing/cmake-build-debug/conan/build/Debug/generators
+-- CMake-Conan: CONANFILE=D:/OneDrive/Escritorio/desktop/sources/raytracing/conanfile.py
+-- Conan: Component target declared 'fmt::fmt'
+-- Configuring done (17.6s)
 -- Generating done (0.0s)
 -- Build files have been written to: D:/OneDrive/Escritorio/desktop/sources/raytracing/cmake-build-debug

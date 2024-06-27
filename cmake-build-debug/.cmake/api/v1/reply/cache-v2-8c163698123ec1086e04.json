@@ -878,6 +878,18 @@
 			"value" : "raytracing"
 		},
 		{
+			"name" : "CMAKE_PROJECT_TOP_LEVEL_INCLUDES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "conan_provider.cmake"
+		},
+		{
 			"name" : "CMAKE_RANLIB",
 			"properties" : 
 			[
@@ -1270,6 +1282,54 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "CONAN_BUILD_PROFILE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Conan build profile"
+				}
+			],
+			"type" : "STRING",
+			"value" : "default"
+		},
+		{
+			"name" : "CONAN_COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/Users/Usuario/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/conan.exe"
+		},
+		{
+			"name" : "CONAN_HOST_PROFILE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Conan host profile"
+				}
+			],
+			"type" : "STRING",
+			"value" : "default;auto-cmake"
+		},
+		{
+			"name" : "CONAN_INSTALL_ARGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Command line arguments for conan install"
+				}
+			],
+			"type" : "STRING",
+			"value" : "--build=missing"
+		},
+		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
 			"properties" : 
 			[
@@ -1280,6 +1340,78 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "TRUE"
+		},
+		{
+			"name" : "_CONAN_GNU_LIBSTDCXX_IS_CXX11_ABI",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test _CONAN_GNU_LIBSTDCXX_IS_CXX11_ABI"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "_CONAN_IS_GNU_LIBSTDCXX",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test _CONAN_IS_GNU_LIBSTDCXX"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "_cmake_program",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "D:/bin/cmake.exe"
+		},
+		{
+			"name" : "conan_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for conan."
+				}
+			],
+			"type" : "PATH",
+			"value" : "conan_DIR-NOTFOUND"
+		},
+		{
+			"name" : "conan_provider.cmake_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for conan_provider.cmake."
+				}
+			],
+			"type" : "PATH",
+			"value" : "conan_provider.cmake_DIR-NOTFOUND"
+		},
+		{
+			"name" : "fmt_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for fmt."
+				}
+			],
+			"type" : "PATH",
+			"value" : "D:/OneDrive/Escritorio/desktop/sources/raytracing/cmake-build-debug/conan/build/Debug/generators"
 		},
 		{
 			"name" : "raytracing_BINARY_DIR",

@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.28"
+						"string" : "3.24"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "raytracing::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-raytracing-Debug-28323bca73b6e1908bfb.json",
+					"jsonFile" : "target-raytracing-Debug-3f622a446c69ded03a0a.json",
 					"name" : "raytracing",
 					"projectIndex" : 0
 				}

@@ -8,3 +8,6 @@ add_executable(raytracing main.cpp
         vec3.h
         ray.h
 )
+
+find_package(fmt)
+target_link_libraries(raytracing fmt::fmt)
