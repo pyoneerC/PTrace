@@ -15,7 +15,7 @@
 
 class vec3 {
 public:
-  vec3() = default;
+  vec3() : e{0.0f, 0.0f, 0.0f} {}
   vec3(const float e0, const float e1, const float e2) : e{e0, e1, e2} {}
 
   [[nodiscard]] float x() const { return e[0]; }
@@ -46,7 +46,7 @@ public:
   bool operator<=(const vec3& v) const;
   bool operator>=(const vec3& v) const;
 
-  vec3& operator!();
+  vec3 operator!() const;
 
   vec3 operator*(float t) const;
   vec3 operator/(float t) const;
@@ -59,3 +59,6 @@ public:
 
   float e[3];
 };
+
+float dot(const vec3& v1, const vec3& v2);
+vec3 cross(const vec3& v1, const vec3& v2);

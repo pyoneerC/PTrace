@@ -95,6 +95,6 @@ Install finished successfully
 -- Conan: Component target declared 'GTest::gmock'
 -- Conan: Component target declared 'GTest::gmock_main'
 -- Conan: Target declared 'gtest::gtest'
--- Configuring done (1.6s)
+-- Configuring done (1.8s)
 -- Generating done (0.0s)
 -- Build files have been written to: D:/OneDrive/Escritorio/desktop/sources/raytracing/cmake-build-debug

@@ -1,5 +1,6 @@
 #include "vec3.h"
 #include "gtest/gtest.h"
+#include <cmath>
 
 TEST(Vec3Test, TestVec3Addition) {
   vec3 v1(1.0f, 2.0f, 3.0f);
@@ -147,4 +148,152 @@ TEST(Vec3Test, TestVec3Equality) {
 
   EXPECT_TRUE(v1 == v2);
   EXPECT_FALSE(v1 == v3);
+}
+
+TEST(Vec3Test, TestVec3Inequality) {
+  vec3 v1(1.0f, 2.0f, 3.0f);
+  vec3 v2(1.0f, 2.0f, 3.0f);
+  vec3 v3(4.0f, 5.0f, 6.0f);
+
+  EXPECT_FALSE(v1 != v2);
+  EXPECT_TRUE(v1 != v3);
+}
+
+TEST(Vec3Test, TestVec3LessThan) {
+  vec3 v1(1.0f, 2.0f, 3.0f);
+  vec3 v2(4.0f, 5.0f, 6.0f);
+
+  EXPECT_TRUE(v1 < v2);
+  EXPECT_FALSE(v2 < v1);
+}
+
+TEST(Vec3Test, TestVec3GreaterThan) {
+  vec3 v1(1.0f, 2.0f, 3.0f);
+  vec3 v2(4.0f, 5.0f, 6.0f);
+
+  EXPECT_TRUE(v2 > v1);
+  EXPECT_FALSE(v1 > v2);
+}
+
+TEST(Vec3Test, TestVec3LessThanOrEqual) {
+  vec3 v1(1.0f, 2.0f, 3.0f);
+  vec3 v2(4.0f, 5.0f, 6.0f);
+  vec3 v3(1.0f, 2.0f, 3.0f);
+
+  EXPECT_TRUE(v1 <= v2);
+  EXPECT_TRUE(v1 <= v3);
+  EXPECT_FALSE(v2 <= v1);
+}
+
+TEST(Vec3Test, TestVec3GreaterThanOrEqual) {
+  vec3 v1(1.0f, 2.0f, 3.0f);
+  vec3 v2(4.0f, 5.0f, 6.0f);
+  vec3 v3(1.0f, 2.0f, 3.0f);
+
+  EXPECT_TRUE(v2 >= v1);
+  EXPECT_TRUE(v1 >= v3);
+  EXPECT_FALSE(v1 >= v2);
+}
+
+TEST(Vec3Test, TestVec3Negation) {
+  vec3 v(1.0f, 2.0f, 3.0f);
+  vec3 v2 = !v;
+
+  EXPECT_FLOAT_EQ(v2.x(), -1.0f);
+  EXPECT_FLOAT_EQ(v2.y(), -2.0f);
+  EXPECT_FLOAT_EQ(v2.z(), -3.0f);
+}
+
+TEST(Vec3Test, TestDefaultConstructor) {
+  vec3 v;
+
+  EXPECT_FLOAT_EQ(v.x(), 0.0f);
+  EXPECT_FLOAT_EQ(v.y(), 0.0f);
+  EXPECT_FLOAT_EQ(v.z(), 0.0f);
+}
+
+TEST(Vec3Test, TestParameterizedConstructor) {
+  vec3 v(1.0f, 2.0f, 3.0f);
+
+  EXPECT_FLOAT_EQ(v.x(), 1.0f);
+  EXPECT_FLOAT_EQ(v.y(), 2.0f);
+  EXPECT_FLOAT_EQ(v.z(), 3.0f);
+}
+
+TEST(Vec3Test, TestCopyConstructor) {
+  vec3 v1(1.0f, 2.0f, 3.0f);
+  vec3 v2(v1);
+
+  EXPECT_FLOAT_EQ(v2.x(), 1.0f);
+  EXPECT_FLOAT_EQ(v2.y(), 2.0f);
+  EXPECT_FLOAT_EQ(v2.z(), 3.0f);
+}
+
+TEST(Vec3Test, TestAssignmentOperator) {
+  vec3 v1(1.0f, 2.0f, 3.0f);
+  vec3 v2;
+  v2 = v1;
+
+  EXPECT_FLOAT_EQ(v2.x(), 1.0f);
+  EXPECT_FLOAT_EQ(v2.y(), 2.0f);
+  EXPECT_FLOAT_EQ(v2.z(), 3.0f);
+}
+
+TEST(Vec3Test, TestVec3MultiplicationByScalar) {
+  vec3 v(1.0f, 2.0f, 3.0f);
+  vec3 v2 = v * 2.0f;
+
+  EXPECT_FLOAT_EQ(v2.x(), 2.0f);
+  EXPECT_FLOAT_EQ(v2.y(), 4.0f);
+  EXPECT_FLOAT_EQ(v2.z(), 6.0f);
+}
+
+TEST(Vec3Test, TestVec3DivisionByScalar) {
+  vec3 v(2.0f, 4.0f, 6.0f);
+  vec3 v2 = v / 2.0f;
+
+  EXPECT_FLOAT_EQ(v2.x(), 1.0f);
+  EXPECT_FLOAT_EQ(v2.y(), 2.0f);
+  EXPECT_FLOAT_EQ(v2.z(), 3.0f);
+}
+
+TEST(Vec3Test, TestVec3DotProduct) {
+  vec3 v1(1.0f, 2.0f, 3.0f);
+  vec3 v2(4.0f, 5.0f, 6.0f);
+
+  EXPECT_FLOAT_EQ(dot(v1, v2), 32.0f);
+}
+
+TEST(Vec3Test, TestVec3RGBAccessors) {
+  vec3 v(1.0f, 2.0f, 3.0f);
+
+  EXPECT_FLOAT_EQ(v.r(), 1.0f);
+  EXPECT_FLOAT_EQ(v.g(), 2.0f);
+  EXPECT_FLOAT_EQ(v.b(), 3.0f);
+}
+
+TEST(Vec3Test, TestVec3CrossProduct) {
+  vec3 v1(1.0f, 0.0f, 0.0f);
+  vec3 v2(0.0f, 1.0f, 0.0f);
+  vec3 v3 = cross(v1, v2);
+
+  EXPECT_FLOAT_EQ(v3.x(), 0.0f);
+  EXPECT_FLOAT_EQ(v3.y(), 0.0f);
+  EXPECT_FLOAT_EQ(v3.z(), 1.0f);
+
+  // Check orthogonality
+  EXPECT_FLOAT_EQ(dot(v1, v3), 0.0f);
+  EXPECT_FLOAT_EQ(dot(v2, v3), 0.0f);
+}
+
+TEST(Vec3Test, TestVec3Normalization) {
+  vec3 v(1.0f, 2.0f, 3.0f);
+  v.make_unit_vector();
+
+  EXPECT_FLOAT_EQ(v.length(), 1.0f);
+
+  float magnitude = std::sqrt(1.0f + 4.0f + 9.0f); // sqrt(x^2 + y^2 + z^2)
+  EXPECT_FLOAT_EQ(v.x(), 1.0f / magnitude);
+  EXPECT_FLOAT_EQ(v.y(), 2.0f / magnitude);
+  EXPECT_FLOAT_EQ(v.z(), 3.0f / magnitude);
 }
