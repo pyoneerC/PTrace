@@ -11,3 +11,76 @@
 // Description:
 // [Brief description of the file's contents and purpose]
 //------------------------------------------------------------------------------
+
+#include "vec3.h"
+#include <cmath>
+
+const vec3& vec3::operator+() const {
+  return *this;
+}
+
+vec3 vec3::operator-() const {
+  return vec3(-e[0], -e[1], -e[2]);
+}
+
+float vec3::operator[](const int i) const {
+  return e[i];
+}
+
+vec3& vec3::operator+=(const vec3& v) {
+  e[0] += v.e[0];
+  e[1] += v.e[1];
+  e[2] += v.e[2];
+  return *this;
+}
+
+vec3& vec3::operator-=(const vec3& v) {
+  e[0] -= v.e[0];
+  e[1] -= v.e[1];
+  e[2] -= v.e[2];
+  return *this;
+}
+
+vec3& vec3::operator*=(const vec3& v) {
+  e[0] *= v.e[0];
+  e[1] *= v.e[1];
+  e[2] *= v.e[2];
+  return *this;
+}
+
+vec3& vec3::operator/=(const vec3& v) {
+  e[0] /= v.e[0];
+  e[1] /= v.e[1];
+  e[2] /= v.e[2];
+  return *this;
+}
+
+vec3& vec3::operator*=(float t) {
+  e[0] *= t;
+  e[1] *= t;
+  e[2] *= t;
+  return *this;
+}
+
+vec3& vec3::operator/=(float t) {
+  float k = 1.0/t;
+  e[0] *= k;
+  e[1] *= k;
+  e[2] *= k;
+  return *this;
+}
+
+float vec3::lenght() const {
+  return sqrt(e[0]*e[0] + e[1]*e[1] + e[2]*e[2]);
+}
+
+float vec3::squared_length() const {
+  return e[0]*e[0] + e[1]*e[1] + e[2]*e[2];
+}
+
+void vec3::make_unit_vector() {
+  float k = 1.0 / lenght();
+  e[0] *= k;
+  e[1] *= k;
+  e[2] *= k;
+}

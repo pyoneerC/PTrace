@@ -12,8 +12,6 @@
 // [Brief description of the file's contents and purpose]
 //------------------------------------------------------------------------------
 
-#include <cmath>
-
 class vec3 {
 
   vec3() = default;
@@ -26,9 +24,9 @@ class vec3 {
   [[nodiscard]] float g() const { return e[1]; }
   [[nodiscard]] float b() const { return e[2]; }
 
-  const vec3& operator+() const { return *this; }
-  vec3 operator-() const { return vec3(-e[0], -e[1], -e[2]); }
-  float operator[](const int i) const { return e[i]; }
+  const vec3& operator+() const;
+  vec3 operator-() const;
+  float operator[](const int i) const;
 
   vec3& operator+=(const vec3& v);
   vec3& operator-=(const vec3& v);
@@ -38,13 +36,9 @@ class vec3 {
   vec3& operator*=(float t);
   vec3& operator/=(float t);
 
-  [[nodiscard]] float lenght() const {
-    return std::sqrt(e[0]*e[0] + e[1]*e[1] + e[2]*e[2]);
-  }
+  float lenght() const;
 
-  [[nodiscard]] float squared_length() const {
-    return e[0]*e[0] + e[1]*e[1] + e[2]*e[2];
-  }
+  float squared_length() const;
 
   void make_unit_vector();
 
