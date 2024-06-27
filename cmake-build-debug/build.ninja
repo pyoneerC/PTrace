@@ -61,6 +61,12 @@ build CMakeFiles/raytracing.dir/vec3.cpp.obj: CXX_COMPILER__raytracing_unscanned
   OBJECT_DIR = CMakeFiles\raytracing.dir
   OBJECT_FILE_DIR = CMakeFiles\raytracing.dir
 
+build CMakeFiles/raytracing.dir/ray.cpp.obj: CXX_COMPILER__raytracing_unscanned_Debug D$:/OneDrive/Escritorio/desktop/sources/raytracing/ray.cpp || cmake_object_order_depends_target_raytracing
+  DEP_FILE = CMakeFiles\raytracing.dir\ray.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\raytracing.dir
+  OBJECT_FILE_DIR = CMakeFiles\raytracing.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target raytracing
@@ -69,7 +75,7 @@ build CMakeFiles/raytracing.dir/vec3.cpp.obj: CXX_COMPILER__raytracing_unscanned
 #############################################
 # Link the executable raytracing.exe
 
-build raytracing.exe: CXX_EXECUTABLE_LINKER__raytracing_Debug CMakeFiles/raytracing.dir/main.cpp.obj CMakeFiles/raytracing.dir/vec3.cpp.obj
+build raytracing.exe: CXX_EXECUTABLE_LINKER__raytracing_Debug CMakeFiles/raytracing.dir/main.cpp.obj CMakeFiles/raytracing.dir/vec3.cpp.obj CMakeFiles/raytracing.dir/ray.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\raytracing.dir
