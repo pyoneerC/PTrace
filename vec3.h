@@ -24,10 +24,14 @@ public:
   [[nodiscard]] float g() const { return e[1]; }
   [[nodiscard]] float b() const { return e[2]; }
 
-  const vec3& operator+() const;
+  vec3& operator+() const;
+  vec3 operator-() const;
+
   vec3& operator+(const vec3& v);
   vec3& operator-(const vec3& v);
-  vec3 operator-() const;
+  vec3& operator*(const vec3& v);
+  vec3& operator/(const vec3& v);
+
   float operator[](const int i) const;
 
   vec3& operator+=(const vec3& v);

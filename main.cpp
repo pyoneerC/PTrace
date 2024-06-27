@@ -5,11 +5,15 @@
 //remember testing with catch2
 
 #include "vec3.h"
+#include "ray.h"
 
 int main() {
-  vec3 v1(1.0, 2.0, 3.0);
-  vec3 v2(4.0, 5.0, 6.0);
-  vec3 v3 = v1 + v2;
-  std::cout << v3.x() << " " << v3.y() << " " << v3.z() << std::endl;
+  vec3 a(1, 2, 3);
+  vec3 b(4, 5, 6);
+  vec3 c = a + b;
+  ray r(a, b);
+  std::cout << r.origin().x() << " " << r.origin().y() << " " << r.origin().z() << std::endl;
+  std::cout << c.x() << " " << c.y() << " " << c.z() << std::endl;
   return 0;
+
 }
