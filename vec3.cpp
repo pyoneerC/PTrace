@@ -16,12 +16,7 @@
 #include <cmath>
 #include <iostream>
 
-vec3& vec3::operator+(const vec3& v) {
-  e[0] += v.e[0];
-  e[1] += v.e[1];
-  e[2] += v.e[2];
-  return *this;
-}
+
 
 vec3& vec3::operator-(const vec3& v) {
   e[0] -= v.e[0];
@@ -46,6 +41,13 @@ vec3& vec3::operator/(const vec3& v) {
 
 vec3 vec3::operator-() const {
   return vec3(-e[0], -e[1], -e[2]);
+}
+
+vec3& vec3::operator+(const vec3& v) {
+  e[0] += v.e[0];
+  e[1] += v.e[1];
+  e[2] += v.e[2];
+  return *this;
 }
 
 float vec3::operator[](const int i) const {
