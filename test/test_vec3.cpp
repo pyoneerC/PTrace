@@ -9,7 +9,7 @@
 // [Brief description of the file's contents and purpose]
 //------------------------------------------------------------------------------
 
-#include "../vec3.h"
+#include "../math/vec3.h"
 #include "gtest/gtest.h"
 #include <cmath>
 

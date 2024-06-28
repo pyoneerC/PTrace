@@ -9,7 +9,7 @@
 // [Brief description of the file's contents and purpose]
 //------------------------------------------------------------------------------
 
-#include "../ray.h"
+#include "../math/ray.h"
 #include "gtest/gtest.h"
 
 TEST(RayTest, TestRayOrigin) {
