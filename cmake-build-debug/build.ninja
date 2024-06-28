@@ -49,19 +49,26 @@ cmake_ninja_workdir = D$:/OneDrive/Escritorio/desktop/sources/raytracing/cmake-b
 
 build cmake_object_order_depends_target_raytracing: phony || CMakeFiles/raytracing.dir
 
-build CMakeFiles/raytracing.dir/main.cpp.obj: CXX_COMPILER__raytracing_unscanned_Debug D$:/OneDrive/Escritorio/desktop/sources/raytracing/main.cpp || cmake_object_order_depends_target_raytracing
-  DEP_FILE = CMakeFiles\raytracing.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include -isystem C:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/include
-  OBJECT_DIR = CMakeFiles\raytracing.dir
-  OBJECT_FILE_DIR = CMakeFiles\raytracing.dir
-
 build CMakeFiles/raytracing.dir/vec3.cpp.obj: CXX_COMPILER__raytracing_unscanned_Debug D$:/OneDrive/Escritorio/desktop/sources/raytracing/vec3.cpp || cmake_object_order_depends_target_raytracing
   DEP_FILE = CMakeFiles\raytracing.dir\vec3.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include -isystem C:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/include
   OBJECT_DIR = CMakeFiles\raytracing.dir
   OBJECT_FILE_DIR = CMakeFiles\raytracing.dir
+
+build CMakeFiles/raytracing.dir/test/test_vec3.cpp.obj: CXX_COMPILER__raytracing_unscanned_Debug D$:/OneDrive/Escritorio/desktop/sources/raytracing/test/test_vec3.cpp || cmake_object_order_depends_target_raytracing
+  DEP_FILE = CMakeFiles\raytracing.dir\test\test_vec3.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include -isystem C:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/include
+  OBJECT_DIR = CMakeFiles\raytracing.dir
+  OBJECT_FILE_DIR = CMakeFiles\raytracing.dir\test
+
+build CMakeFiles/raytracing.dir/test/test_ray.cpp.obj: CXX_COMPILER__raytracing_unscanned_Debug D$:/OneDrive/Escritorio/desktop/sources/raytracing/test/test_ray.cpp || cmake_object_order_depends_target_raytracing
+  DEP_FILE = CMakeFiles\raytracing.dir\test\test_ray.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -isystem C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/include -isystem C:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/include
+  OBJECT_DIR = CMakeFiles\raytracing.dir
+  OBJECT_FILE_DIR = CMakeFiles\raytracing.dir\test
 
 
 # =============================================================================
@@ -71,7 +78,7 @@ build CMakeFiles/raytracing.dir/vec3.cpp.obj: CXX_COMPILER__raytracing_unscanned
 #############################################
 # Link the executable raytracing.exe
 
-build raytracing.exe: CXX_EXECUTABLE_LINKER__raytracing_Debug CMakeFiles/raytracing.dir/main.cpp.obj CMakeFiles/raytracing.dir/vec3.cpp.obj | C$:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/lib/libfmtd.a C$:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/lib/libgmock_main.a C$:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/lib/libgmock.a C$:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/lib/libgtest_main.a C$:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/lib/libgtest.a
+build raytracing.exe: CXX_EXECUTABLE_LINKER__raytracing_Debug CMakeFiles/raytracing.dir/vec3.cpp.obj CMakeFiles/raytracing.dir/test/test_vec3.cpp.obj CMakeFiles/raytracing.dir/test/test_ray.cpp.obj | C$:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/lib/libfmtd.a C$:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/lib/libgmock_main.a C$:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/lib/libgmock.a C$:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/lib/libgtest_main.a C$:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/lib/libgtest.a
   FLAGS = -g
   LINK_LIBRARIES = C:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/lib/libfmtd.a  C:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/lib/libgmock_main.a  C:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/lib/libgmock.a  C:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/lib/libgtest_main.a  C:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LC:/Users/Usuario/.conan2/p/b/fmtbd40bce86df3d/p/lib   -LC:/Users/Usuario/.conan2/p/b/gtesta816cbf80953c/p/lib

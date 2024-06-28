@@ -1,7 +1,6 @@
 
 #pragma once
 
-
 //------------------------------------------------------------------------------
 // This file is part of the PTrace Engine.
 // File: vec3.h
@@ -32,7 +31,7 @@ public:
   vec3& operator*(const vec3& v);
   vec3& operator/(const vec3& v);
 
-  float operator[](const int i) const;
+  float operator[](int i) const;
 
   vec3& operator+=(const vec3& v);
   vec3& operator-=(const vec3& v);
@@ -51,9 +50,9 @@ public:
   vec3 operator*(float t) const;
   vec3 operator/(float t) const;
 
-  float length() const;
+  [[nodiscard]] float length() const;
 
-  float squared_length() const;
+  [[nodiscard]] float squared_length() const;
 
   void make_unit_vector();
 

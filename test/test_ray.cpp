@@ -200,3 +200,62 @@ TEST(RayTest, TestRayWithMixOfPositiveAndNegativeNumbers) {
   EXPECT_FLOAT_EQ(point.y(), -8.0f);
   EXPECT_FLOAT_EQ(point.z(), 9.0f);
 }
+
+TEST(RayTest, TestRayWithFractionalNumbers) {
+  vec3 origin(1.5f, 2.5f, 3.5f);
+  vec3 direction(4.5f, 5.5f, 6.5f);
+  ray r(origin, direction);
+
+  vec3 point = r.point_at_parameter(2.0f);
+
+  EXPECT_FLOAT_EQ(point.x(), 10.5f);
+  EXPECT_FLOAT_EQ(point.y(), 13.5f);
+  EXPECT_FLOAT_EQ(point.z(), 16.5f);
+}
+
+TEST(RayTest, DoesRayHitSphereReturnsTrueWhenRayIntersectsSphere) {
+  vec3 sphereCenter(0.0f, 0.0f, -1.0f);
+  float sphereRadius = 0.5f;
+  ray r(vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 0.0f, -1.0f));
+
+  EXPECT_TRUE(doesRayHitSphere(sphereCenter, sphereRadius, r));
+}
+
+TEST(RayTest, ColorReturnsRedWhenRayHitsSphere) {
+  ray r(vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 0.0f, -1.0f));
+
+  vec3 expectedColor(1.0f, 0.0f, 0.0f);
+  EXPECT_EQ(color(r), expectedColor);
+}
+
+TEST(RayTest, DoesRayHitSphereBigNumbers) {
+  vec3 sphereCenter(1e9f, 1e9f, 1e9f);
+  float sphereRadius = 0.5f;
+  ray r(vec3(1e9f, 1e9f, 1e9f), vec3(0.0f, 0.0f, -1.0f));
+
+  EXPECT_TRUE(doesRayHitSphere(sphereCenter, sphereRadius, r));
+}
+
+TEST(RayTest, DoesRayHitSphereSmallNumbers) {
+  vec3 sphereCenter(1e-9f, 1e-9f, 1e-9f);
+  float sphereRadius = 0.5f;
+  ray r(vec3(1e-9f, 1e-9f, 1e-9f), vec3(0.0f, 0.0f, -1.0f));
+
+  EXPECT_TRUE(doesRayHitSphere(sphereCenter, sphereRadius, r));
+}
+
+TEST(RayTest, DoesRayHitSphereNegativeNumbers) {
+  vec3 sphereCenter(-1.0f, -1.0f, -1.0f);
+  float sphereRadius = 0.5f;
+  ray r(vec3(-1.0f, -1.0f, -1.0f), vec3(0.0f, 0.0f, -1.0f));
+
+  EXPECT_TRUE(doesRayHitSphere(sphereCenter, sphereRadius, r));
+}
+
+TEST(RayTest, DoesRayHitSphereMixOfPositiveAndNegativeNumbers) {
+  vec3 sphereCenter(-1.0f, 1.0f, -1.0f);
+  float sphereRadius = 0.5f;
+  ray r(vec3(-1.0f, 1.0f, -1.0f), vec3(0.0f, 0.0f, -1.0f));
+
+  EXPECT_TRUE(doesRayHitSphere(sphereCenter, sphereRadius, r));
+}

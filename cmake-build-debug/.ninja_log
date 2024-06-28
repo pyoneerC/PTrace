@@ -1,12 +1,17 @@
 # ninja log v6
-15	1405	7412335661846147	CMakeFiles/raytracing.dir/main.cpp.obj	2db5e2914498e30f
-15	1227	7412351112684173	CMakeFiles/raytracing.dir/test_ray.cpp.obj	c84a8394a8290678
-1374	4796	7412351659187854	raytracing.exe	1f779e81e8afd04f
-15	223	7412345223447796	CMakeFiles/raytracing.dir/vec3.cpp.obj	f6cc11b1eaab13f2
-19	1319	7412351645645575	CMakeFiles/raytracing.dir/test/test_ray.cpp.obj	d73c94cd8d6071
-15	1937	7412352014507924	build.ninja	4ec231b1ac4149a4
-16	1374	7412351645605570	CMakeFiles/raytracing.dir/test/test_vec3.cpp.obj	7da4350c4167efcf
-17	1322	7412345223467787	CMakeFiles/raytracing.dir/test_vec3.cpp.obj	7245794c345a466c
-3	1627	7412352014507924	build.ninja	4ec231b1ac4149a4
 15	1376	7412352015129378	CMakeFiles/raytracing.dir/main.cpp.obj	2db5e2914498e30f
-1380	1450	7412352028775627	raytracing.exe	b81247ba3e73661f
+15	1227	7412351112684173	CMakeFiles/raytracing.dir/test_ray.cpp.obj	c84a8394a8290678
+1380	5181	7412887226801432	raytracing.exe	b572f10fe0339a50
+23	552	7412887213224318	CMakeFiles/raytracing.dir/vec3.cpp.obj	f6cc11b1eaab13f2
+19	1319	7412351645645575	CMakeFiles/raytracing.dir/test/test_ray.cpp.obj	d73c94cd8d6071
+3	1627	7412887447670299	build.ninja	4ec231b1ac4149a4
+26	1380	7412887213254320	CMakeFiles/raytracing.dir/test/test_vec3.cpp.obj	7da4350c4167efcf
+17	1322	7412345223467787	CMakeFiles/raytracing.dir/test_vec3.cpp.obj	7245794c345a466c
+19	1331	7412887511550675	CMakeFiles/raytracing.dir/test/test_ray.cpp.obj	d73c94cd8d6071
+1332	5015	7412887524682773	raytracing.exe	1f779e81e8afd04f
+20	1384	7412888550972392	CMakeFiles/raytracing.dir/test/test_ray.cpp.obj	d73c94cd8d6071
+1384	4919	7412888564609986	raytracing.exe	1f779e81e8afd04f
+16	1320	7412889832666825	CMakeFiles/raytracing.dir/test/test_ray.cpp.obj	d73c94cd8d6071
+1320	4778	7412889845707148	raytracing.exe	1f779e81e8afd04f
+18	1411	7412890106988041	CMakeFiles/raytracing.dir/test/test_ray.cpp.obj	d73c94cd8d6071
+1412	4809	7412890120931418	raytracing.exe	1f779e81e8afd04f

@@ -34,11 +34,11 @@ vec3& vec3::operator/(const vec3& v) {
 }
 
 vec3 vec3::operator-() const {
-  return vec3(-e[0], -e[1], -e[2]);
+  return {-e[0], -e[1], -e[2]};
 }
 
 vec3 vec3::operator+(const vec3& v) const {
-  return vec3(e[0] + v.e[0], e[1] + v.e[1], e[2] + v.e[2]);
+  return {e[0] + v.e[0], e[1] + v.e[1], e[2] + v.e[2]};
 }
 
 float vec3::operator[](const int i) const {
@@ -98,15 +98,15 @@ bool vec3::operator>=(const vec3& v) const {
 }
 
 vec3 vec3::operator!() const {
-  return vec3(-e[0], -e[1], -e[2]);
+  return {-e[0], -e[1], -e[2]};
 }
 
 vec3 vec3::operator*(float t) const {
-  return vec3(e[0]*t, e[1]*t, e[2]*t);
+  return {e[0]*t, e[1]*t, e[2]*t};
 }
 
 vec3 vec3::operator/(float t) const {
-  return vec3(e[0]/t, e[1]/t, e[2]/t);
+  return {e[0] / t, e[1] / t, e[2] / t};
 }
 
 float vec3::length() const {
@@ -119,7 +119,7 @@ float vec3::squared_length() const {
 
 
 void vec3::make_unit_vector() {
-  float k = 1.0 / length();
+  double k = 1.0 / length();
   e[0] *= k;
   e[1] *= k;
   e[2] *= k;
